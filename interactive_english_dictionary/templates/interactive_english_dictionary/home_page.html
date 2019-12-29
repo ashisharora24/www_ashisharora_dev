@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h2> this is interactive_english_dictionary</h2>
+<form method='POST' action=".">
+  {% csrf_token %}
+  {{ form.as_p}}
+  <button type="submit">submit</button>
+</form>
+{% endblock %}
