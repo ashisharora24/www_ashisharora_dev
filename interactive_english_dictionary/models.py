@@ -17,9 +17,5 @@ class DictionaryQuery(models.Model):
     timestamp = models.DateTimeField(auto_now_add = True)
     result = models.CharField(max_length=120)
 
-    # def __str__(self):
-    #     return "{user}-{word}-{result}".format(
-    #                             user=self.user,
-    #                             word=self.word,
-    #                             result=self.result1,
-    #                             )
+    def __str__(self):
+        return "{}-{}-{}".format(self.user, self.word, self.result)
