@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="jumbotron text-center">
+  <h1>Create Webmaps with Python and Folium</h1>
+  <p>Create Webmaps with Python and Folium...</p>
+
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Please enter the word for which you would like to get the meaning:</br></h3>
+      <form method='POST' action=".">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit">submit</button>
+      </form>
+    </div>
+    </div>
+</div>
+{% endblock %}

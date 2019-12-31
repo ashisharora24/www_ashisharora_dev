@@ -15,8 +15,18 @@ Including another URLconf
 """
 # this is for testing only
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+from .views import (
+    home_page
+)
+import interactive_english_dictionary.urls
+import webmaps.urls
 
 urlpatterns = [
+    path('',home_page),
+    path('interactive_english_dictionary/',include(interactive_english_dictionary.urls)),
+    path('webmaps/',include(webmaps.urls)),
     path('admin/', admin.site.urls),
+
 ]
