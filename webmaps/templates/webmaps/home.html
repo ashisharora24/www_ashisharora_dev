@@ -8,9 +8,10 @@
 </div>
 <hr>
 <div class="container">
+
   <div class="row">
     <div class="col-sm-12">
-      <h3>Please enter the word for which you would like to get the meaning:</br></h3>
+      <h3>Create Webmaps with Python and Folium:</br></h3>
       <form method='POST' action=".">
         {% csrf_token %}
         {{ form.as_p}}
@@ -18,5 +19,18 @@
       </form>
     </div>
     </div>
+
+    {% if map_name %}
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Your maps is avaiable at below link:</br></h3>
+        <a href="/webmaps/generated_maps/{{map_name}}" target="_blank">{{map_name}}</a>
+
+      </div>
+      </div>
+
+    {% endif %}
+
+
 </div>
 {% endblock %}
