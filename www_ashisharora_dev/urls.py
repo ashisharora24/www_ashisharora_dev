@@ -22,11 +22,13 @@ from .views import (
 )
 import interactive_english_dictionary.urls
 import webmaps.urls
+import signup_and_signin.urls
 
 urlpatterns = [
     path('',home_page),
     path('interactive_english_dictionary/',include(interactive_english_dictionary.urls)),
     path('webmaps/',include(webmaps.urls)),
+    path('signup_and_signin/',include(signup_and_signin.urls)),
     path('admin/', admin.site.urls),
 
 ]

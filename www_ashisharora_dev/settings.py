@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'interactive_english_dictionary',
     'webmaps',
+    'signup_and_signin',
 ]
 
 MIDDLEWARE = [
